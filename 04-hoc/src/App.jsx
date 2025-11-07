@@ -1,20 +1,14 @@
 import UserInfo from "./components/UserInfo"
 import { logProps } from "./components/LogProps"
+import IncludeUser from "./components/IncludeUser"
+import UserForm from "./components/UserForm"
 
-const UserInfoWrapper = logProps(UserInfo)
-
-const user = {
-  id: "1",
-  name: "Sarah Waters",
-  age: 55,
-  country: "United Kingdom",
-  books: ["Fingersmith", "The Night Watch"],
-}
+const UserInfoWrapper = IncludeUser(UserInfo, "1")
 
 const App = () => {
   return (
     <>
-      <UserInfoWrapper user={user} />
+      <UserForm />
     </>
   )
 }
